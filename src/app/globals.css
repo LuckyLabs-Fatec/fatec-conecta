@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+  background-color: #AD0F0A;
+  font-weight: 600;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,4 +1,4 @@
-import { HomeTemplate } from "@/presentation/templates/HomeTemplate";
+import { HomeTemplate } from "@/presentation/components/templates/home-template";
 
 export default function Home() {
   return (
