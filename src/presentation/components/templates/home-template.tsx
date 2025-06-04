@@ -26,7 +26,7 @@ export const HomeTemplate = () => {
           </CardContent>
         </Card>
       </section>
-      <section className="grid grid-cols-2 gap-2">
+      <section className="grid md:grid-cols-2 gap-2">
         <ActionCard
           title="Projetos"
           description="Comunidade"

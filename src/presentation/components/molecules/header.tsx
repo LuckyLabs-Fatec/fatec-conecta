@@ -7,7 +7,7 @@ export const Header = () => {
   const router = useRouter()
 
   return (
-    <header className="bg-[#AD0F0A] px-16 py-4 flex justify-between items-center">
+    <header className="bg-[#AD0F0A] px-16 py-4 flex flex-col md:flex-row justify-between items-center">
       <span className='flex items-center gap-1'>
         <Image
           src="./logo.svg"
@@ -17,7 +17,7 @@ export const Header = () => {
         />
         <h1 className="text-white uppercase font-bold">Conecta</h1>
       </span>
-      <nav>
+      <nav className="border-t-2 border-white pt-2 md:border-t-0">
         <ul className="flex items-center gap-4 text-white font-semibold">
           <li data-testid="home-menu-item">
             <a href="">
