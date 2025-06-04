@@ -23,6 +23,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 button {
@@ -30,9 +31,18 @@ button {
   background-color: #AD0F0A;
   font-weight: 600;
 }
+
 .btn-enter {
   border: 2px solid white;
   padding: .5rem 3rem;
+}
+.btn-goback {
+  background-color: #008CB0;
+}
+
+.btn-check {
+  background-color: white;
+  border: 1px solid gray;
 }
 @media (prefers-color-scheme: dark) {
   html {
