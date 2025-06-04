@@ -30,6 +30,10 @@ button {
   background-color: #AD0F0A;
   font-weight: 600;
 }
+.btn-enter {
+  border: 2px solid white;
+  padding: .5rem 3rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,0 +1,40 @@
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../atoms/carousel";
+import { Button } from "../atoms/button";
+
+import BibliotecaItinerante from "../../assets/onibus.jpg";
+import ConstrucoesSustentaveis from "../../assets/construcoes-sustentaveis.jpg";
+
+export const CustomCarousel = () => (
+  <Carousel>
+    <CarouselContent>
+      <CarouselItem className="p-0">
+        <div
+          className="rounded-sm w-full h-[400px] bg-cover bg-center p-4 flex flex-col justify-between"
+          style={{ backgroundImage: `url(${BibliotecaItinerante.src})` }}
+        >
+          <span>
+            <h1 className="text-5xl text-white font-bold">Biblioteca Itinerante</h1>
+            <p className="text-white">Um ônibus customizado como uma biblioteca itinerante está em Natal até o dia 14 de julho. A iniciativa do projeto Livros nas Praças tem como principal objetivo a democratização do acesso da população ao universo literário. Mais de 2 mil livros estão à disposição para leitura, de forma gratuita.</p>
+            <p className="text-white">O ônibus fica na Praça Augusto Leite, no bairro Tirol, até sábado (8), das 10h às 16h. Em seguida, no período de 10 a 14 de julho, a biblioteca itinerante estará na Praça das Flores, em Petrópolis, no mesmo horário. </p>
+          </span>
+          <Button className="px-10 py-6">Leia +</Button>
+        </div>
+      </CarouselItem>
+      <CarouselItem>
+        <div
+          className="rounded-sm w-full h-[400px] bg-cover bg-center p-4 flex flex-col justify-between"
+          style={{ backgroundImage: `url(${ConstrucoesSustentaveis.src})` }}
+        >
+          <span>
+            <h1 className="text-5xl text-white font-bold">Construção Sustentável</h1>
+            <p className="text-white">Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
+            <p className="text-white">Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Paisis, filhis, espiritis santis. Cevadis im ampola pa arma uma pindureta.</p>
+          </span>
+          <Button className="px-10 py-6">Leia +</Button>
+        </div>
+      </CarouselItem>
+    </CarouselContent>
+    <CarouselPrevious />
+    <CarouselNext />
+  </Carousel>
+)

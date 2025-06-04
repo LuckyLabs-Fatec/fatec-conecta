@@ -23,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.variable} ${roboto.variable}`}>
+    <html lang="pt-BR">
+      <body className={`${montserrat.variable} ${roboto.variable} flex flex-col min-h-screen`}>
         {children}
       </body>
     </html>

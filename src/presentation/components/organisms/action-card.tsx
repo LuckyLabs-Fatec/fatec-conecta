@@ -3,14 +3,14 @@ import { Button } from "../atoms/button";
 
 interface IActionCard {
   title: string;
-  description: string;
-  content: string;
+  description?: string;
+  children: React.ReactNode;
 }
 
 export const ActionCard: React.FC<IActionCard> = ({
   title,
   description,
-  content,
+  children
 }) => (
   <Card>
     <CardHeader>
@@ -18,7 +18,7 @@ export const ActionCard: React.FC<IActionCard> = ({
       <CardDescription>{description}</CardDescription>
     </CardHeader>
     <CardContent>
-      <p>{content}</p>
+      {children}
     </CardContent>
     <CardFooter className="flex flex-col gap-8">
       <hr className="border-stone-400 w-full" />
