@@ -5,19 +5,19 @@ import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
 import { Checkbox } from "../atoms/checkbox";
 import { useRouter } from "next/navigation";
-
+// 285 * 100
 export const LoginTemplate = () => {
   const router = useRouter();
   return (
-    <main className="flex min-h-screen">
-      <section className="flex-1 flex flex-col justify-center items-center bg-[#AD0F0A]">
-        <span>
-          <Image src="./logo.svg" width={285} height={285} alt="fatec conecta logo"/>
+    <main className="flex flex-col min-h-screen md:flex-row">
+      <section className="flex md:flex-col justify-center items-center bg-[#AD0F0A] md:flex-1">
+        <span className="flex items-center gap-4 md:flex-col md:gap-0">
+          <Image className="w-[100px] md:w-[285px]" src="./logo.svg" width={285} height={285} alt="fatec conecta logo" />
           <h1 className="text-white uppercase text-center font-bold text-2xl">Conecta</h1>
         </span>
       </section>
-      <section className="flex-1 flex items-center">
-        <form action="" className="px-[20%] flex flex-col gap-4 w-full">
+      <section className="pb-10 flex-1 flex pt-30 md:pt-0 md:items-center md:pb-0">
+        <form action="" className="px-8 flex flex-col gap-4 w-full md:px-[20%]">
           <span>
             <h1 className="text-2xl">Login</h1>
             <h2 className="pt-2">Se você ainda não possui uma conta! Pode <a style={{ color: "#AD0F0A" }}>se cadastrar aqui!</a></h2>
