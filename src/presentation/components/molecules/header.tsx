@@ -19,7 +19,7 @@ export const Header = () => {
       </span>
       <nav>
         <ul className="flex items-center gap-4 text-white font-semibold">
-          <li data-testid="home">
+          <li data-testid="home-menu-item">
             <a href="">
               Início
             </a>

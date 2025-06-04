@@ -8,7 +8,7 @@ export const HomeTemplate = () => (
       <CustomCarousel />
     </section>
     <section>
-      <Card>
+      <Card data-testid="main-info-fatec-conecta">
         <CardHeader>
           <CardTitle>Como funciona o FATEC CONECTA?</CardTitle>
         </CardHeader>
