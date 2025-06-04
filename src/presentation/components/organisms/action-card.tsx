@@ -17,7 +17,7 @@ export const ActionCard: React.FC<IActionCard> = ({
   <Card>
     <CardHeader>
       <CardTitle>{title}</CardTitle>
-      <CardDescription>{description}</CardDescription>
+      <CardDescription className="text-[#008CB0]">{description}</CardDescription>
     </CardHeader>
     <CardContent>
       {children}
