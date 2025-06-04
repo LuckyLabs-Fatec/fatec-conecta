@@ -5,12 +5,14 @@ interface IActionCard {
   title: string;
   description?: string;
   children: React.ReactNode;
+  action?: () => void;
 }
 
 export const ActionCard: React.FC<IActionCard> = ({
   title,
   description,
-  children
+  children,
+  action
 }) => (
   <Card>
     <CardHeader>
@@ -22,7 +24,7 @@ export const ActionCard: React.FC<IActionCard> = ({
     </CardContent>
     <CardFooter className="flex flex-col gap-8">
       <hr className="border-stone-400 w-full" />
-      <Button className="uppercase w-full">Começar</Button>
+      <Button onClick={action} className="uppercase w-full">Começar</Button>
     </CardFooter>
   </Card>
 )
