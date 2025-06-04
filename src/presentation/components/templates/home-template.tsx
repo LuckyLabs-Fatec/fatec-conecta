@@ -2,7 +2,7 @@ import { ActionCard } from "../organisms/action-card";
 import { Card, CardContent, CardHeader, CardTitle } from "../atoms/card";
 import { CustomCarousel } from "../organisms/custom-carousel";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
 
 export const HomeTemplate = () => {
@@ -41,7 +41,6 @@ export const HomeTemplate = () => {
           <p>Registre projetos que se conectem as demandas da comunidade.</p>
         </ActionCard>
       </section>
-      <ToastContainer />
     </main>
   )
 }
