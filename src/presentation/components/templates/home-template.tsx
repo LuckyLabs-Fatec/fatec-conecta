@@ -30,6 +30,7 @@ export const HomeTemplate = () => {
         <ActionCard
           title="Projetos"
           description="Comunidade"
+          action={() => router.push("/projects")}
         >
           <p>Conheça projetos publicados por outros membros da comunidade.</p>
         </ActionCard>
