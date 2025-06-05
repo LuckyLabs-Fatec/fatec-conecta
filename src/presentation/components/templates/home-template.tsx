@@ -35,7 +35,7 @@ export const HomeTemplate = () => {
           <p>Conheça projetos publicados por outros membros da comunidade.</p>
         </ActionCard>
         <ActionCard
-          title="Registrar sugestão de idea"
+          title="Registrar sugestão de ideia"
           description="Comunidade"
           action={notify}
         >
