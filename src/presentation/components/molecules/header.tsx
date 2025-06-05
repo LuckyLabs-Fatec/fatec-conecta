@@ -20,12 +20,12 @@ export const Header = () => {
       <nav className="border-t-2 border-white pt-2 md:border-t-0">
         <ul className="flex items-center gap-4 text-white font-semibold">
           <li data-testid="home-menu-item">
-            <a href="">
+            <a onClick={() => router.push("/")}>
               Início
             </a>
           </li>
           <li data-testid="projects">
-            <a href="">
+            <a onClick={() => router.push("/projects")}>
               Projetos
             </a>
           </li>
