@@ -26,12 +26,18 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 button {
   cursor: pointer;
   background-color: #AD0F0A;
   font-weight: 600;
 }
 
+button:hover {
+  opacity: 0.9;
+}
 .btn-enter {
   border: 2px solid white;
   padding: .5rem 3rem;
