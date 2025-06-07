@@ -30,7 +30,7 @@ export const Header = () => {
             </a>
           </li>
           <li className="border-l-2 border-white pl-6">
-            <a href="">Registre-se</a>
+            <a onClick={() => router.push("/register-user")} href="">Registre-se</a>
           </li>
           <li>
             <Button onClick={() => router.push("/login")} className="btn-enter">Entrar</Button>
