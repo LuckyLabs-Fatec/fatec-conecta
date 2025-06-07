@@ -1,6 +1,9 @@
 'use client'
 import Image from 'next/image'
 import { Button } from '../atoms/button'
+
+import Link from 'next/link';
+
 import { useRouter } from 'next/navigation'
 
 export const Header = () => {
@@ -20,17 +23,17 @@ export const Header = () => {
       <nav className="border-t-2 border-white pt-2 md:border-t-0">
         <ul className="flex items-center gap-4 text-white font-semibold">
           <li data-testid="home-menu-item">
-            <a onClick={() => router.push("/")}>
+            <Link href="/">
               Início
-            </a>
+            </Link>
           </li>
           <li data-testid="projects">
-            <a onClick={() => router.push("/projects")}>
+            <Link href="/project">
               Projetos
-            </a>
+            </Link>
           </li>
           <li className="border-l-2 border-white pl-6">
-            <a onClick={() => router.push("/register-user")} href="">Registre-se</a>
+            <Link href="/register-user">Registre-se</Link>
           </li>
           <li>
             <Button onClick={() => router.push("/login")} className="btn-enter">Entrar</Button>

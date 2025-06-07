@@ -5,6 +5,7 @@ import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
 import { Checkbox } from "../atoms/checkbox";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export const LoginTemplate = () => {
   const router = useRouter();
@@ -20,7 +21,7 @@ export const LoginTemplate = () => {
         <form action="" className="px-8 flex flex-col gap-4 w-full md:px-[20%]">
           <span>
             <h1 className="text-center md:text-left text-2xl">Login</h1>
-            <h2 className="pt-2">Se você ainda não possui uma conta! Pode <a style={{ color: "#AD0F0A" }}>se cadastrar aqui!</a></h2>
+            <h2 className="pt-2">Se você ainda não possui uma conta! Pode <Link href="/register-user" style={{ color: "#AD0F0A" }}>se cadastrar aqui!</Link></h2>
           </span>
           <div className="grid items-center gap-3 w-full mt-4 md:mt-6">
             <Label htmlFor="email">Email</Label>
