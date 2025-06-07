@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Label } from "../atoms/label";
 import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
+import Link from "next/link";
 
 export const RegisterUserTemplate = () => {
   return (
@@ -33,10 +34,11 @@ export const RegisterUserTemplate = () => {
           </div>
           <div className="grid items-center gap-3 w-full">
             <Label htmlFor="passwordConfirmation">Confirmação de senha:</Label>
-            <Input type="password" id="passwordConfirmation" placeholder="Senha" />
+            <Input type="password" id="passwordConfirmation" placeholder="Confirmar Senha" />
           </div>
           <hr className="w-full border-t-2 border-stone-300" />
           <Button className="uppercase py-6 mt-4">Registrar</Button>
+          <Link href="/login" className="text-center">Já tem cadastro? Clique aqui!</Link>
         </form>
       </section>
     </main>
