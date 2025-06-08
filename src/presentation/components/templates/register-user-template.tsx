@@ -1,19 +1,14 @@
 'use client'
-import Image from "next/image";
 import { Label } from "../atoms/label";
 import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
 import Link from "next/link";
+import { AsideBranding } from "../organisms/aside-branding";
 
 export const RegisterUserTemplate = () => {
   return (
     <main className="flex flex-col min-h-screen md:flex-row">
-      <section className="flex md:flex-col justify-center items-center bg-[#AD0F0A] md:flex-1">
-        <span className="flex items-center gap-4 md:flex-col md:gap-0">
-          <Image className="w-[100px] md:w-[285px]" src="./logo.svg" width={285} height={285} alt="fatec conecta logo" />
-          <h1 className="text-white uppercase text-center font-bold text-2xl">Conecta</h1>
-        </span>
-      </section>
+      <AsideBranding />
       <section className="pb-10 flex-1 flex mt-20 md:mt-0 md:items-center md:pb-0">
         <form action="" className="px-8 flex flex-col gap-4 w-full md:px-[20%]">
           <span>

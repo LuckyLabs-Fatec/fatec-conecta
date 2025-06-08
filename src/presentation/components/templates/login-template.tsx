@@ -1,22 +1,16 @@
 'use client'
-import Image from "next/image";
 import { Label } from "../atoms/label";
 import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
 import { Checkbox } from "../atoms/checkbox";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { LogIn } from "lucide-react";
+import { AsideBranding } from "../organisms/aside-branding";
 
 export const LoginTemplate = () => {
-  const router = useRouter();
   return (
     <main className="flex flex-col min-h-screen md:flex-row">
-      <section className="flex md:flex-col justify-center items-center bg-[#AD0F0A] md:flex-1">
-        <span className="flex items-center gap-4 md:flex-col md:gap-0">
-          <Image className="w-[100px] md:w-[285px]" src="./logo.svg" width={285} height={285} alt="fatec conecta logo" />
-          <h1 className="text-white uppercase text-center font-bold text-2xl">Conecta</h1>
-        </span>
-      </section>
+      <AsideBranding />
       <section className="pb-10 flex-1 flex mt-20 md:mt-0 md:items-center md:pb-0">
         <form action="" className="px-8 flex flex-col gap-4 w-full md:px-[20%]">
           <span>
@@ -41,8 +35,7 @@ export const LoginTemplate = () => {
               </a>
           </div>
           <hr className="w-full border-t-2 border-stone-300" />
-          <Button className="uppercase py-6 mt-4">Entrar</Button>
-          <Button onClick={() => router.push("/")} className="btn-goback uppercase py-6">Voltar para o Início</Button>
+          <Button type="submit" className="uppercase py-6 mt-4">Entrar<LogIn /></Button>
         </form>
       </section>
     </main>
