@@ -4,6 +4,8 @@ import { Input } from "../atoms/input";
 import { Button } from "../atoms/button";
 import Link from "next/link";
 import { AsideBranding } from "../organisms/aside-branding";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../atoms/select";
+import { Separator } from "../atoms/separator";
 
 export const RegisterUserTemplate = () => {
   return (
@@ -15,7 +17,7 @@ export const RegisterUserTemplate = () => {
             <h1 className="text-center md:text-left text-2xl">Registrar</h1>
             <h2 className="pt-2">Insira seus dados para se registrar.</h2>
           </span>
-          <div className="grid items-center gap-3 w-full mt-4 md:mt-6">
+          <div className="grid items-center gap-3 w-full mt-4 md:mt-2">
             <Label htmlFor="name">Nome</Label>
             <Input type="text" id="name" placeholder="Nome" />
           </div>
@@ -31,7 +33,20 @@ export const RegisterUserTemplate = () => {
             <Label htmlFor="passwordConfirmation">Confirmação de senha:</Label>
             <Input type="password" id="passwordConfirmation" placeholder="Confirmar Senha" />
           </div>
-          <hr className="w-full border-t-2 border-stone-300" />
+          <Separator />
+          <div className="grid items-center gap-3 w-full">
+            <Label htmlFor="account-type">Tipo de conta:</Label>
+            <Select defaultValue="CM">
+              <SelectTrigger className="w-full bg-white!">
+                <SelectValue placeholder="Selecione o tipo de cona" />
+              </SelectTrigger>
+              <SelectContent id="account-type">
+                <SelectItem value="CM">Comunidade</SelectItem>
+                <SelectItem value="CF">Coordenação Fatec</SelectItem>
+                <SelectItem value="AF">Aluno Fatec</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
           <Button className="uppercase py-6 mt-4">Registrar</Button>
           <Link href="/login" className="text-center">Já tem cadastro? Clique aqui!</Link>
         </form>
