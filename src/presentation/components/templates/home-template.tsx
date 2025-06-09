@@ -15,7 +15,7 @@ export const HomeTemplate = () => {
   }
   return (
     <main className="p-4 flex flex-col gap-4">
-      <section className="flex gap-2">
+      <section className="flex flex-col gap-2">
         <CustomCarousel />
         <Card data-testid="main-info-fatec-conecta">
           <CardHeader>
@@ -23,7 +23,7 @@ export const HomeTemplate = () => {
           </CardHeader>
           <CardContent className="flex gap-1">
             <Image src={ComunidadeFatec.src} width={150} height={100} alt="comunidade e fatec" />
-            <p className="text-xl">Conectar <b className="text-[#D9755B]">comunidade</b>, <b className="text-[#1B425E]">alunos</b> e <b className="text-[#1B425F]">coordenação</b> da <b className="text-[#AD0F0A]">Fatec Votorantim</b> o projeto <b>Fatec Conecta</b> tem como objetivo transformar as demandas da comunidade em Projetos Integradores para os cursos de Desenvolvimento de Software Multiplataforma, Ciência de Dados para Negócios e Controle de Obras.</p>
+            <p className="text-[16px] md:text-xl">Conectar <b className="text-[#D9755B]">comunidade</b>, <b className="text-[#1B425E]">alunos</b> e <b className="text-[#1B425F]">coordenação</b> da <b className="text-[#AD0F0A]">Fatec Votorantim</b> o projeto <b>Fatec Conecta</b> tem como objetivo transformar as demandas da comunidade em Projetos Integradores para os cursos de Desenvolvimento de Software Multiplataforma, Ciência de Dados para Negócios e Controle de Obras.</p>
           </CardContent>
         </Card>
       </section>

@@ -1,13 +1,25 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../atoms/carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 import { Button } from "../atoms/button";
 
 import BibliotecaItinerante from "../../assets/onibus.jpg";
 import ConstrucoesSustentaveis from "../../assets/construcoes-sustentaveis.jpg";
 
+import "swiper/css";
+
 export const CustomCarousel = () => (
-  <Carousel>
-    <CarouselContent>
-      <CarouselItem className="p-0">
+  <Swiper
+    modules={[Autoplay]}
+    spaceBetween={50}
+    slidesPerView={1}
+    className="w-full"
+    autoplay={{
+      delay: 3000,
+      disableOnInteraction: false,
+    }}
+    loop={true}
+  >
+    <SwiperSlide>
         <div
           className="rounded-sm w-full h-[400px] bg-cover bg-center p-4 flex flex-col justify-between"
           style={{ backgroundImage: `url(${BibliotecaItinerante.src})` }}
@@ -19,8 +31,8 @@ export const CustomCarousel = () => (
           </span>
           <Button className="px-10 py-6">Leia +</Button>
         </div>
-      </CarouselItem>
-      <CarouselItem>
+    </SwiperSlide>
+    <SwiperSlide>
         <div
           className="rounded-sm w-full h-[400px] bg-cover bg-center p-4 flex flex-col justify-between"
           style={{ backgroundImage: `url(${ConstrucoesSustentaveis.src})` }}
@@ -32,9 +44,6 @@ export const CustomCarousel = () => (
           </span>
           <Button className="px-10 py-6">Leia +</Button>
         </div>
-      </CarouselItem>
-    </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
-  </Carousel>
+    </SwiperSlide>
+  </Swiper>
 )
