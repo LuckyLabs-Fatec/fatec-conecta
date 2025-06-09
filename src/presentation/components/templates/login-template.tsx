@@ -26,13 +26,13 @@ export const LoginTemplate = () => {
             <Input type="password" id="password" placeholder="Senha" />
           </div>
           <div className="w-full flex justify-between">
-              <div className="flex items-center gap-3">
-                <Checkbox className="btn-check" id="terms" />
-                <Label htmlFor="terms">Lembre-se de mim</Label>
-              </div>
-              <a className="text-sm text-stone-950 hover:underline">
+            <div className="flex items-center gap-3">
+              <Checkbox className="btn-check" id="terms" />
+              <Label htmlFor="terms">Lembre-se de mim</Label>
+            </div>
+            <Link href="/forgot-password" className="text-sm text-stone-950 hover:underline">
                 Esqueceu a senha?
-              </a>
+            </Link>
           </div>
           <hr className="w-full border-t-2 border-stone-300" />
           <Button type="submit" className="uppercase py-6 mt-4">Entrar<LogIn /></Button>
