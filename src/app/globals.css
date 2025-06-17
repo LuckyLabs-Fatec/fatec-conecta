@@ -40,6 +40,13 @@ button:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
+input {
+  transition: transform 0.3s ease-in-out;
+}
+
+input:focus {
+  transform: translateX(8px);
+}
 .btn-enter {
   border: 2px solid white;
   padding: .5rem 3rem;
