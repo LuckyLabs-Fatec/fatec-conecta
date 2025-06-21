@@ -1,3 +1,4 @@
+import { Separator } from "../atoms/separator";
 import { CustomPagination } from "../molecules/custom-pagination";
 import { ProjectCard } from "../organisms/project-card";
 import BibliotecaItinerante from "@/presentation/assets/biblioteca-itinerante.png";
@@ -5,10 +6,11 @@ import BibliotecaItinerante from "@/presentation/assets/biblioteca-itinerante.pn
 
 export const ProjectsTemplate = () => (
   <div className="p-6">
-    <h1 className="text-3xl font-bold my-8">Projetos</h1>
-    <p className="pb-8">
+    <h1 className="text-3xl font-bold my-2">Projetos</h1>
+    <p>
       Explore nossos últimos projetos e contribuições da comunidade.
     </p>
+    <Separator className="my-2" />
     <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <ProjectCard
         title="Biblioteca Itinerante de Programação"
