@@ -1,11 +1,9 @@
 import { ActionCard } from "../organisms/action-card";
 import { Card, CardContent, CardHeader, CardTitle } from "../atoms/card";
 import { CustomCarousel } from "../organisms/custom-carousel";
-import ComunidadeFatec from '@/presentation/assets/comunidade-fatec.png';
 
 import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 export const HomeTemplate = () => {
   const router = useRouter();
@@ -21,8 +19,7 @@ export const HomeTemplate = () => {
           <CardHeader>
             <CardTitle className="uppercase text-center">Como funciona o FATEC CONECTA?</CardTitle>
           </CardHeader>
-          <CardContent className="flex gap-1">
-            <Image src={ComunidadeFatec.src} width={150} height={100} alt="comunidade e fatec" />
+          <CardContent>
             <p className="text-[16px] md:text-xl">Conectar <b className="text-[#D9755B]">comunidade</b>, <b className="text-[#1B425E]">alunos</b> e <b className="text-[#1B425F]">coordenação</b> da <b className="text-[#AD0F0A]">Fatec Votorantim</b> o projeto <b>Fatec Conecta</b> tem como objetivo transformar as demandas da comunidade em Projetos Integradores para os cursos de Desenvolvimento de Software Multiplataforma, Ciência de Dados para Negócios e Controle de Obras.</p>
           </CardContent>
         </Card>
