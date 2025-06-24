@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
+import { Providers } from "@/presentation/providers/providers";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${montserrat.variable} ${roboto.variable} flex flex-col min-h-screen`}>
-        {children}
+        <Providers>{children}</Providers>
         <ToastContainer />
       </body>
     </html>
