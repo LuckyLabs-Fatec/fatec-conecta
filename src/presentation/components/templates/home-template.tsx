@@ -4,13 +4,14 @@ import { CustomCarousel } from "../organisms/custom-carousel";
 
 import { toast } from 'react-toastify';
 import { useRouter } from "next/navigation";
+import { useAuthStore } from "@/presentation/store";
 
 export const HomeTemplate = () => {
   const router = useRouter();
-  const notify = () => {
-    toast.info("Você precisa realize o login antes de registrar um projeto! Estamos te redirecionando para a página de login!")
-    router.push("/login")
-  }
+  const { accessToken } = useAuthStore();
+
+  const isLoggedIn = !!accessToken;
+
   return (
     <main className="p-4 flex flex-col gap-4">
       <section className="flex flex-col gap-2">
@@ -35,7 +36,14 @@ export const HomeTemplate = () => {
         <ActionCard
           title="Registrar sugestão de ideia"
           description="Comunidade"
-          action={notify}
+          action={() => {
+            if (isLoggedIn) {
+              router.push("/projects/proposal")
+            } else {
+              toast.info("Você precisa realize o login antes de registrar um projeto! Estamos te redirecionando para a página de login!")
+              router.push("/login")
+            }
+          }}
         >
           <p>Registre projetos que se conectem as demandas da comunidade.</p>
         </ActionCard>

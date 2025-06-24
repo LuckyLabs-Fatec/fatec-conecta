@@ -12,8 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../atoms/avatar';
 export const Header = () => {
   const router = useRouter();
 
-  const accessToken = useAuthStore((state) => state.accessToken);
-  const clearCurrentUser = useAuthStore((state) => state.clearCurrentUser);
+  const { accessToken, clearCurrentUser, user } = useAuthStore();
 
   const isLoggedIn = !!accessToken;
 
@@ -34,15 +33,19 @@ export const Header = () => {
         {isLoggedIn
           ?
           <DropdownMenu>
-            <DropdownMenuTrigger>
+            <DropdownMenuTrigger className="flex gap-4 items-center">
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
+              <h1 className="text-white">{user.name}</h1>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem onClick={() => router.push("/profile")}>
                 Perfil
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => router.push("/projects/proposals")}>
+                Propostas
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => {
