@@ -49,7 +49,10 @@ export default function ProjectProposals () {
      <>
       <Header />
       <div className="flex-grow">
-        <ProjectProposalTemplate>
+        <ProjectProposalTemplate
+          title="Projetos registrados"
+          description="Revise e gerencie as idéias submetidas."
+        >
           <Table>
             <TableHeader>
               <TableRow>

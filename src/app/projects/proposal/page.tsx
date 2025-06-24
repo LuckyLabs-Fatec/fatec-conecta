@@ -15,7 +15,10 @@ export default function ProjectProposal () {
      <>
       <Header />
       <div className="flex-grow">
-        <ProjectProposalTemplate>
+        <ProjectProposalTemplate
+          title="Registre uma proposta de projeto"
+          description="Descreva sua ideia, seus objetivos e o impacto esperado. Este espaço é dedicado a iniciativas colaborativas que possam evoluir com o apoio de outros membros."
+        >
           <Card className="w-full mt-10">
             <CardContent>
               <form className="space-y-4">
