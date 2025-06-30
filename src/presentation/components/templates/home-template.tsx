@@ -31,7 +31,7 @@ export const HomeTemplate = () => {
           description="Comunidade"
           action={() => router.push("/projects")}
         >
-          <p>Conheça projetos publicados por outros membros da comunidade.</p>
+          <p className="text-xl">Conheça projetos publicados por outros membros da comunidade.</p>
         </ActionCard>
         <ActionCard
           title="Registrar sugestão de ideia"
@@ -45,7 +45,7 @@ export const HomeTemplate = () => {
             }
           }}
         >
-          <p>Registre projetos que se conectem as demandas da comunidade.</p>
+          <p className="text-xl">Registre projetos que se conectem as demandas da comunidade.</p>
         </ActionCard>
       </section>
     </main>
