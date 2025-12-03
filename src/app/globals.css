@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --palette-red-50: #EFD5D7;
+  --palette-red-100: #EDB8BA;
+  --palette-red-200: #DB857F;
+  --palette-red-300: #D06059;
+  --palette-red-400: #D94234;
+  --palette-red-500: #DA3115;
+  --palette-red-600: #CB2616;
+  --palette-red-700: #B91611;
+  --palette-red-800: #AD0F0A;
+  --palette-red-900: #9F0000;
+
+  --cps-red-base: #B20000;
+  --red-dark-10: #7E0000;
+
+  --cps-blue-base: #005C6D;
+  --cps-blue-title-hover: #004854;
+
+  --cps-green-base-aux: #A0C340;
+  --cps-violeta-base-aux: #8A29E6;
+  --cps-crayola-base-aux: #FFED4A;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Hide horizontal scrollbar for mobile chip lists */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Drag-scroll helpers to avoid page scroll while dragging horizontally */
+.touch-pan-x { touch-action: pan-x; }
+.overscroll-contain { overscroll-behavior: contain; }
+.overscroll-x-contain { overscroll-behavior-x: contain; }
+.overscroll-y-none { overscroll-behavior-y: none; }
+
+/* Accessibility helpers */
+body.a11y-large-font {
+  font-size: 112.5%; /* ~18px base if default is 16px */
+}
+
+body.a11y-high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body.a11y-high-contrast a {
+  text-decoration: underline;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
